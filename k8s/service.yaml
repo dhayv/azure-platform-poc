@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fastapi
+  tier: backend
+spec:
+  selector:
+    app.kubernetes.io/name: fastapi
+    tier: backend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
