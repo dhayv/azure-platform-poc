@@ -17,6 +17,7 @@ resource "azurerm_kubernetes_cluster" "k8s" {
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   dns_prefix          = random_pet.azurerm_kubernetes_cluster_dns_prefix.id
+  oidc_issuer_enabled = true
 
   default_node_pool {
     name       = "default"
@@ -30,12 +31,6 @@ resource "azurerm_kubernetes_cluster" "k8s" {
 
   tags = {
     Environment = "staging"
-  }
-}
-
-resource "kubernetes_namespace_v1" "app" {
-  metadata {
-    name = "app"
   }
 }
 
