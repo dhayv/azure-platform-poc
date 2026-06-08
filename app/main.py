@@ -56,4 +56,4 @@ def simulate_error(kind: str = Query("500", pattern="^(500|crash|hang|oom)$")):
     if kind == "hang":
         time.sleep(120)              
     if kind == "oom":
-        _ = bytearray(10 * 1024**3) 
+        _ = bytearray(1024 * 1024 * 1024) 

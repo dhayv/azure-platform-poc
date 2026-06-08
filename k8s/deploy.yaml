@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: fastapi-backend
-        image: devplatformpoc.azurecr.io/fastapi:8cf5ec8
+        image: devplatformpoc.azurecr.io/fastapi:__SHA__
         ports:
         - containerPort: 80
 
@@ -36,14 +36,14 @@ spec:
           httpGet:
             path: /health
             port: 80
-          initialDelaySeconds: 5
+          initialDelaySeconds: 20
           periodSeconds: 10
 
         readinessProbe:
           httpGet:
             path: /ready
             port: 80
-          initialDelaySeconds: 2
+          initialDelaySeconds: 10
           periodSeconds: 5
           failureThreshold: 3
 
@@ -51,6 +51,6 @@ spec:
         - name: APP_VERSION
           value: "1.0.0"
         - name: GIT_SHA
-          value: "8cf5ec8"
+          value: "__SHA__"
         - name: BUILD_TIME
-          value: "2026-06-08T12:00Z"
+          value: "__BUILD_TIME__"
