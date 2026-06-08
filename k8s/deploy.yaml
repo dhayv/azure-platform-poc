@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: fastapi-backend
   namespace: app
   labels:
     app: fastapi
@@ -19,8 +19,8 @@ spec:
         tier: backend
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.14.2
+      - name: fastapi-backend
+        image: devplatformpoc.azurecr.io/fastapi:8cf5ec8
         ports:
         - containerPort: 80
 
@@ -34,7 +34,23 @@ spec:
 
         livenessProbe:
           httpGet:
-            path: /
+            path: /health
             port: 80
-          initialDelaySeconds: 3
-          periodSeconds: 3
+          initialDelaySeconds: 5
+          periodSeconds: 10
+
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 80
+          initialDelaySeconds: 2
+          periodSeconds: 5
+          failureThreshold: 3
+
+        env:
+        - name: APP_VERSION
+          value: "1.0.0"
+        - name: GIT_SHA
+          value: "8cf5ec8"
+        - name: BUILD_TIME
+          value: "2026-06-08T12:00Z"
