@@ -17,10 +17,14 @@ spec:
       labels:
         app: fastapi
         tier: backend
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/path: "/metrics"
+        prometheus.io/port: "80"
     spec:
       containers:
       - name: fastapi-backend
-        image: devplatformpoc.azurecr.io/fastapi:__SHA__
+        image: acraksplatformpocdevhzi2/fastapi:__SHA__
         ports:
         - containerPort: 80
 
@@ -54,3 +58,6 @@ spec:
           value: "__SHA__"
         - name: BUILD_TIME
           value: "__BUILD_TIME__"
+          
+      nodeSelector:
+          workload: apps

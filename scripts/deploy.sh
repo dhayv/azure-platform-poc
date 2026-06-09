@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-REGISTRY_NAME="devplatformpoc.azurecr.io" # e.g., myacr.azurecr.io
+REGISTRY_NAME="acraksplatformpocdevhzi2.azurecr.io" # e.g., myacr.azurecr.io
 IMAGE_NAME="fastapi"
 
 echo "Setting Variables"
@@ -22,7 +22,8 @@ kubectl apply -f k8s/namespace.yaml
 sed -e "s|__SHA__|$SHA|g" -e "s|__BUILD_TIME__|$BUILD_TIME|g" k8s/deploy.yaml \
   | kubectl apply -f -
 
-kubectl apply -f k8s/service.yaml
+kubectl apply -f k8s/service.yaml 
+kubectl apply -f k8s/hpa.yaml
 kubectl rollout status deploy/fastapi-backend -n app
 
 
