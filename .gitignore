@@ -30,3 +30,9 @@ PROJECT_NOTES.md
 __pycache__/
 *.pyc
 .venv/
+
+# Editor
+.vscode/
+
+# Local-only operational scripts
+scripts/capture-evidence.sh
