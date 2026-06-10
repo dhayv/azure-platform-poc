@@ -1,0 +1,60 @@
+INFO:     10.244.1.1:41792 - "GET /simulate-error?kind=500 HTTP/1.1" 500 Internal Server Error
+INFO:     10.244.1.1:54848 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.224.0.4:19708 - "GET /simulate-error?kind=500 HTTP/1.1" 500 Internal Server Error
+INFO:     10.244.1.1:45851 - "GET /simulate-error?kind=500 HTTP/1.1" 500 Internal Server Error
+INFO:     10.244.1.1:54856 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:49598 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:49604 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.1.1:49612 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:52476 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:52490 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.1.1:52500 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:57748 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:57754 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.1.1:57756 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:35662 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:35674 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.1.1:35676 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:51718 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:51722 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.1.1:51736 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:41698 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:41702 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.1.1:41718 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:51310 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:51324 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.1.1:51340 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:55152 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:55160 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.1.1:30324 - "GET /simulate-error?kind=500 HTTP/1.1" 500 Internal Server Error
+INFO:     10.244.1.1:24120 - "GET /simulate-error?kind=500 HTTP/1.1" 500 Internal Server Error
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+INFO:     10.244.1.1:50810 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:38996 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:39012 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.1.1:39028 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:40230 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:40236 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.1.1:40252 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:58118 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:58120 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.1.1:58130 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:60882 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:60884 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.1.1:60888 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:44798 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:44810 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.1.1:44822 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:48646 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:48654 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.1.1:48658 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.1.1:49894 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.224.0.4:41301 - "GET /simulate-error?kind=500 HTTP/1.1" 500 Internal Server Error
+INFO:     10.244.1.1:17935 - "GET /simulate-error?kind=500 HTTP/1.1" 500 Internal Server Error
+INFO:     10.224.0.4:58271 - "GET /simulate-error?kind=500 HTTP/1.1" 500 Internal Server Error
+INFO:     10.224.0.4:20917 - "GET /simulate-error?kind=500 HTTP/1.1" 500 Internal Server Error
+INFO:     10.244.1.1:13930 - "GET /simulate-error?kind=500 HTTP/1.1" 500 Internal Server Error
+INFO:     10.224.0.4:47287 - "GET /simulate-error?kind=500 HTTP/1.1" 500 Internal Server Error
+INFO:     10.224.0.4:51035 - "GET /simulate-error?kind=500 HTTP/1.1" 500 Internal Server Error
+INFO:     10.244.1.1:7777 - "GET /simulate-error?kind=500 HTTP/1.1" 500 Internal Server Error

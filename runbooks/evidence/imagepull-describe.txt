@@ -1,0 +1,225 @@
+Name:             fastapi-backend-64886df6bf-rcgft
+Namespace:        app
+Priority:         0
+Service Account:  default
+Node:             aks-userpool-11530830-vmss000000/10.224.0.5
+Start Time:       Tue, 09 Jun 2026 12:23:45 -0500
+Labels:           app=fastapi
+                  pod-template-hash=64886df6bf
+                  tier=backend
+Annotations:      prometheus.io/path: /metrics
+                  prometheus.io/port: 80
+                  prometheus.io/scrape: true
+Status:           Running
+IP:               10.244.1.14
+IPs:
+  IP:           10.244.1.14
+Controlled By:  ReplicaSet/fastapi-backend-64886df6bf
+Containers:
+  fastapi-backend:
+    Container ID:   containerd://091af1065022dd8854209fc4200cc7d10ef42de4c08d57aea32ff84e0c8b8a0c
+    Image:          acraksplatformpocdevhzi2.azurecr.io/fastapi:60759f1
+    Image ID:       acraksplatformpocdevhzi2.azurecr.io/fastapi@sha256:90f019e90bdd2cc6e760bcd5936adc1c46ad67cb2e18d66ac2ceea325e642671
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Tue, 09 Jun 2026 12:51:02 -0500
+    Last State:     Terminated
+      Reason:       Error
+      Exit Code:    1
+      Started:      Tue, 09 Jun 2026 12:48:39 -0500
+      Finished:     Tue, 09 Jun 2026 12:50:30 -0500
+    Ready:          True
+    Restart Count:  3
+    Limits:
+      cpu:     500m
+      memory:  512Mi
+    Requests:
+      cpu:      100m
+      memory:   128Mi
+    Liveness:   http-get http://:80/health delay=20s timeout=1s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:80/ready delay=10s timeout=1s period=5s #success=1 #failure=3
+    Environment:
+      APP_VERSION:  1.0.0
+      GIT_SHA:      60759f1
+      BUILD_TIME:   2026-06-09T17:23:40Z
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-ssgsb (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-ssgsb:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              workload=apps
+Tolerations:                 node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age                   From               Message
+  ----     ------     ----                  ----               -------
+  Normal   Scheduled  30m                   default-scheduler  Successfully assigned app/fastapi-backend-64886df6bf-rcgft to aks-userpool-11530830-vmss000000
+  Normal   Pulling    30m                   kubelet            Pulling image "acraksplatformpocdevhzi2.azurecr.io/fastapi:60759f1"
+  Normal   Pulled     30m                   kubelet            Successfully pulled image "acraksplatformpocdevhzi2.azurecr.io/fastapi:60759f1" in 3.697s (3.697s including waiting). Image size: 82942403 bytes.
+  Warning  Unhealthy  3m51s                 kubelet            Readiness probe failed: Get "http://10.244.1.14:80/ready": dial tcp 10.244.1.14:80: connect: connection refused
+  Warning  BackOff    3m31s (x7 over 6m1s)  kubelet            Back-off restarting failed container fastapi-backend in pod fastapi-backend-64886df6bf-rcgft_app(4f089286-ac8a-4ad2-9354-fa3d36c13ba8)
+  Normal   Created    3m19s (x4 over 30m)   kubelet            Created container: fastapi-backend
+  Normal   Started    3m19s (x4 over 30m)   kubelet            Started container fastapi-backend
+  Normal   Pulled     3m19s (x3 over 13m)   kubelet            Container image "acraksplatformpocdevhzi2.azurecr.io/fastapi:60759f1" already present on machine
+
+
+Name:             fastapi-backend-64886df6bf-stkwv
+Namespace:        app
+Priority:         0
+Service Account:  default
+Node:             aks-userpool-11530830-vmss000000/10.224.0.5
+Start Time:       Tue, 09 Jun 2026 12:24:01 -0500
+Labels:           app=fastapi
+                  pod-template-hash=64886df6bf
+                  tier=backend
+Annotations:      prometheus.io/path: /metrics
+                  prometheus.io/port: 80
+                  prometheus.io/scrape: true
+Status:           Running
+IP:               10.244.1.15
+IPs:
+  IP:           10.244.1.15
+Controlled By:  ReplicaSet/fastapi-backend-64886df6bf
+Containers:
+  fastapi-backend:
+    Container ID:   containerd://519ccf3aa53f245fe0fb76a0549fa9bd2b0b4edd8ef686b44d6c3b8ab1c4d65c
+    Image:          acraksplatformpocdevhzi2.azurecr.io/fastapi:60759f1
+    Image ID:       acraksplatformpocdevhzi2.azurecr.io/fastapi@sha256:90f019e90bdd2cc6e760bcd5936adc1c46ad67cb2e18d66ac2ceea325e642671
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Tue, 09 Jun 2026 12:53:23 -0500
+    Last State:     Terminated
+      Reason:       OOMKilled
+      Exit Code:    137
+      Started:      Tue, 09 Jun 2026 12:49:09 -0500
+      Finished:     Tue, 09 Jun 2026 12:53:04 -0500
+    Ready:          True
+    Restart Count:  2
+    Limits:
+      cpu:     500m
+      memory:  512Mi
+    Requests:
+      cpu:      100m
+      memory:   128Mi
+    Liveness:   http-get http://:80/health delay=20s timeout=1s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:80/ready delay=10s timeout=1s period=5s #success=1 #failure=3
+    Environment:
+      APP_VERSION:  1.0.0
+      GIT_SHA:      60759f1
+      BUILD_TIME:   2026-06-09T17:23:40Z
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-g22p9 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-g22p9:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              workload=apps
+Tolerations:                 node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age                From               Message
+  ----     ------     ----               ----               -------
+  Normal   Scheduled  30m                default-scheduler  Successfully assigned app/fastapi-backend-64886df6bf-stkwv to aks-userpool-11530830-vmss000000
+  Warning  BackOff    70s (x3 over 76s)  kubelet            Back-off restarting failed container fastapi-backend in pod fastapi-backend-64886df6bf-stkwv_app(9abb5f0b-8468-45ad-b395-9a2a1e74bc2b)
+  Normal   Pulled     58s (x3 over 30m)  kubelet            Container image "acraksplatformpocdevhzi2.azurecr.io/fastapi:60759f1" already present on machine
+  Normal   Created    58s (x3 over 30m)  kubelet            Created container: fastapi-backend
+  Normal   Started    58s (x3 over 30m)  kubelet            Started container fastapi-backend
+
+
+Name:             fastapi-backend-66966f7f7-6lwbp
+Namespace:        app
+Priority:         0
+Service Account:  default
+Node:             aks-userpool-11530830-vmss000000/10.224.0.5
+Start Time:       Tue, 09 Jun 2026 12:53:36 -0500
+Labels:           app=fastapi
+                  pod-template-hash=66966f7f7
+                  tier=backend
+Annotations:      prometheus.io/path: /metrics
+                  prometheus.io/port: 80
+                  prometheus.io/scrape: true
+Status:           Pending
+IP:               10.244.1.19
+IPs:
+  IP:           10.244.1.19
+Controlled By:  ReplicaSet/fastapi-backend-66966f7f7
+Containers:
+  fastapi-backend:
+    Container ID:   
+    Image:          acraksplatformpocdevhzi2.azurecr.io/fastapi:notarealtag
+    Image ID:       
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Waiting
+      Reason:       ImagePullBackOff
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     500m
+      memory:  512Mi
+    Requests:
+      cpu:      100m
+      memory:   128Mi
+    Liveness:   http-get http://:80/health delay=20s timeout=1s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:80/ready delay=10s timeout=1s period=5s #success=1 #failure=3
+    Environment:
+      APP_VERSION:  1.0.0
+      GIT_SHA:      60759f1
+      BUILD_TIME:   2026-06-09T17:23:40Z
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-9g82l (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-9g82l:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              workload=apps
+Tolerations:                 node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age                From               Message
+  ----     ------     ----               ----               -------
+  Normal   Scheduled  46s                default-scheduler  Successfully assigned app/fastapi-backend-66966f7f7-6lwbp to aks-userpool-11530830-vmss000000
+  Normal   BackOff    20s (x2 over 45s)  kubelet            Back-off pulling image "acraksplatformpocdevhzi2.azurecr.io/fastapi:notarealtag"
+  Warning  Failed     20s (x2 over 45s)  kubelet            Error: ImagePullBackOff
+  Normal   Pulling    5s (x3 over 46s)   kubelet            Pulling image "acraksplatformpocdevhzi2.azurecr.io/fastapi:notarealtag"
+  Warning  Failed     5s (x3 over 46s)   kubelet            Failed to pull image "acraksplatformpocdevhzi2.azurecr.io/fastapi:notarealtag": [rpc error: code = NotFound desc = failed to pull and unpack image "acraksplatformpocdevhzi2.azurecr.io/fastapi:notarealtag": failed to resolve reference "acraksplatformpocdevhzi2.azurecr.io/fastapi:notarealtag": acraksplatformpocdevhzi2.azurecr.io/fastapi:notarealtag: not found, failed to pull and unpack image "acraksplatformpocdevhzi2.azurecr.io/fastapi:notarealtag": failed to resolve reference "acraksplatformpocdevhzi2.azurecr.io/fastapi:notarealtag": failed to authorize: failed to fetch anonymous token: unexpected status from GET request to https://acraksplatformpocdevhzi2.azurecr.io/oauth2/token?scope=repository%3Afastapi%3Apull&service=acraksplatformpocdevhzi2.azurecr.io: 401 Unauthorized]
+  Warning  Failed     5s (x3 over 46s)   kubelet            Error: ErrImagePull

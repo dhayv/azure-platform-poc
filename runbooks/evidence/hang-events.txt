@@ -1,0 +1,30 @@
+34m         Normal    Pulling                        pod/fastapi-backend-8644c7d964-ccpzx          Pulling image "acraksplatformpocdevhzi2/fastapi:60759f1"
+34m         Warning   Failed                         pod/fastapi-backend-8644c7d964-ccpzx          Failed to pull image "acraksplatformpocdevhzi2/fastapi:60759f1": failed to pull and unpack image "docker.io/acraksplatformpocdevhzi2/fastapi:60759f1": failed to resolve reference "docker.io/acraksplatformpocdevhzi2/fastapi:60759f1": pull access denied, repository does not exist or may require authorization: server message: insufficient_scope: authorization failed
+34m         Warning   Failed                         pod/fastapi-backend-8644c7d964-ccpzx          Error: ErrImagePull
+32m         Warning   Failed                         pod/fastapi-backend-8644c7d964-ccpzx          Error: ImagePullBackOff
+32m         Normal    BackOff                        pod/fastapi-backend-8644c7d964-ccpzx          Back-off pulling image "acraksplatformpocdevhzi2/fastapi:60759f1"
+32m         Normal    BackOff                        pod/fastapi-backend-8644c7d964-dbfpr          Back-off pulling image "acraksplatformpocdevhzi2/fastapi:60759f1"
+32m         Warning   Failed                         pod/fastapi-backend-8644c7d964-dbfpr          Error: ImagePullBackOff
+31m         Warning   FailedGetResourceMetric        horizontalpodautoscaler/fastapi-backend-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+29m         Normal    SuccessfulCreate               replicaset/fastapi-backend-64886df6bf         Created pod: fastapi-backend-64886df6bf-rcgft
+29m         Normal    Scheduled                      pod/fastapi-backend-64886df6bf-rcgft          Successfully assigned app/fastapi-backend-64886df6bf-rcgft to aks-userpool-11530830-vmss000000
+29m         Normal    ScalingReplicaSet              deployment/fastapi-backend                    Scaled up replica set fastapi-backend-64886df6bf from 0 to 1
+29m         Normal    Pulling                        pod/fastapi-backend-64886df6bf-rcgft          Pulling image "acraksplatformpocdevhzi2.azurecr.io/fastapi:60759f1"
+29m         Normal    Pulled                         pod/fastapi-backend-64886df6bf-rcgft          Successfully pulled image "acraksplatformpocdevhzi2.azurecr.io/fastapi:60759f1" in 3.697s (3.697s including waiting). Image size: 82942403 bytes.
+29m         Normal    SuccessfulCreate               replicaset/fastapi-backend-64886df6bf         Created pod: fastapi-backend-64886df6bf-stkwv
+29m         Normal    SuccessfulDelete               replicaset/fastapi-backend-8644c7d964         Deleted pod: fastapi-backend-8644c7d964-ccpzx
+29m         Normal    ScalingReplicaSet              deployment/fastapi-backend                    Scaled up replica set fastapi-backend-64886df6bf from 1 to 2
+29m         Normal    ScalingReplicaSet              deployment/fastapi-backend                    Scaled down replica set fastapi-backend-8644c7d964 from 2 to 1
+29m         Normal    Scheduled                      pod/fastapi-backend-64886df6bf-stkwv          Successfully assigned app/fastapi-backend-64886df6bf-stkwv to aks-userpool-11530830-vmss000000
+28m         Normal    SuccessfulDelete               replicaset/fastapi-backend-8644c7d964         Deleted pod: fastapi-backend-8644c7d964-dbfpr
+28m         Normal    ScalingReplicaSet              deployment/fastapi-backend                    Scaled down replica set fastapi-backend-8644c7d964 from 1 to 0
+10m         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/fastapi-backend-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+10m         Warning   FailedGetResourceMetric        horizontalpodautoscaler/fastapi-backend-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+3m54s       Normal    Pulled                         pod/fastapi-backend-64886df6bf-stkwv          Container image "acraksplatformpocdevhzi2.azurecr.io/fastapi:60759f1" already present on machine
+3m54s       Normal    Created                        pod/fastapi-backend-64886df6bf-stkwv          Created container: fastapi-backend
+3m54s       Normal    Started                        pod/fastapi-backend-64886df6bf-stkwv          Started container fastapi-backend
+2m33s       Warning   Unhealthy                      pod/fastapi-backend-64886df6bf-rcgft          Readiness probe failed: Get "http://10.244.1.14:80/ready": dial tcp 10.244.1.14:80: connect: connection refused
+2m13s       Warning   BackOff                        pod/fastapi-backend-64886df6bf-rcgft          Back-off restarting failed container fastapi-backend in pod fastapi-backend-64886df6bf-rcgft_app(4f089286-ac8a-4ad2-9354-fa3d36c13ba8)
+2m1s        Normal    Started                        pod/fastapi-backend-64886df6bf-rcgft          Started container fastapi-backend
+2m1s        Normal    Created                        pod/fastapi-backend-64886df6bf-rcgft          Created container: fastapi-backend
+2m1s        Normal    Pulled                         pod/fastapi-backend-64886df6bf-rcgft          Container image "acraksplatformpocdevhzi2.azurecr.io/fastapi:60759f1" already present on machine

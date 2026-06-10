@@ -1,0 +1,4 @@
+NAME                               READY   STATUS              RESTARTS        AGE   IP            NODE                               NOMINATED NODE   READINESS GATES
+fastapi-backend-64886df6bf-rcgft   1/1     Running             3 (3m59s ago)   30m   10.244.1.14   aks-userpool-11530830-vmss000000   <none>           <none>
+fastapi-backend-64886df6bf-rv8bn   0/1     ContainerCreating   0               2s    <none>        aks-userpool-11530830-vmss000000   <none>           <none>
+fastapi-backend-64886df6bf-stkwv   1/1     Running             2 (85s ago)     30m   10.244.1.15   aks-userpool-11530830-vmss000000   <none>           <none>

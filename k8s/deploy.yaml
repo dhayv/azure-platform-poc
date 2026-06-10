@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: fastapi-backend
-        image: acraksplatformpocdevhzi2/fastapi:__SHA__
+        image: acraksplatformpocdevhzi2.azurecr.io/fastapi:__SHA__
         ports:
         - containerPort: 80
 
